@@ -15,4 +15,4 @@ class Review(BaseModel):
     """
     place_id = ""  # It will be the Place.id
     user_id = ""  # It will be the User.id
-    text = ""
+    text = ""   # it will take text from user
