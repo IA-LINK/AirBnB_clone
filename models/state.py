@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""
+Defines a module for the State class
+"""
 from .base_model import BaseModel
 
 

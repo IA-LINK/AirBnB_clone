@@ -1,5 +1,7 @@
-#!/usr/bin/python3
-""" init modelss """
+"""
+Defines a module to define a unique FileStorage
+instance.
+"""
 
 from models.engine.file_storage import FileStorage
 
