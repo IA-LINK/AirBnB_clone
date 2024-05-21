@@ -3,7 +3,10 @@
 Defines a module that created the command-line
 interpreter
 """
+from ast import arg
 import cmd
+from dataclasses import asdict
+from typing import Self
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -157,6 +160,66 @@ class HBNBCommand(cmd.Cmd):
         print("Prints a given instance based on the "
               "class name and an ID. Syntax: show "
               "<class_name> <ID>\n")
+
+@staticmethod
+class BnBConsole(cmd.Cmd):
+    """ Define the command-line interpreter """
+     
+    def do_user(self, arg):
+       """Manage User objects.
+    Args:
+      arg: Subcommand (show, create, destroy, update, all) followed by optional arguments.
+
+    Returns:
+      None
+    """
+    subcommand, *args = arg.strip().split()
+    if subcommand == "show":
+        Self.show_user(args)
+    elif subcommand == "create":
+        Self.create_user(args)
+    elif subcommand == "destroy":
+        Self.destroy_user(args)
+    elif subcommand == "update":
+        Self.update_user(args)
+    elif subcommand == "all":
+        Self.show_all_users()
+    else:
+      print(f"Invalid subcommand: '{subcommand}'. Use 'show', 'create', 'destroy', 'update', or 'all'.")
+      
+    def show_user(self, args):
+        if not args:
+            print("Please specify a user ID to show.")
+            return
+    
+    def create_user(self, args):
+        try:
+            new_user = User(**asdict)
+            print(f"User created successfully. ID: {new_user.id}")
+        except Exception as e:
+            print(f"Error creating user: {e}")
+    
+    def destroy_user(self, args):
+        if not args:
+            print("Please specify a user ID to destroy.")
+            
+    def update_user(self, args):
+        if not args:
+            print("Please specify a user ID and update data.")
+            return
+    def show_all_users(self):
+        """ A handler for emptylines """
+        pass
+    def emptyline(self):
+        """ A handler for emptylines """
+        pass
+    
+    def do_EOF(self, line):
+        """ A handler for emptylines """
+        pass
+    
+if __name__ == '__main__':
+    BnBConsole().cmdloop()
 
     @staticmethod
     def load_objects(arg, file_obj):
