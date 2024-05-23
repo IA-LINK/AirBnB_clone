@@ -13,3 +13,7 @@ This is an HTML page that displays a header and a footer by using the style tag 
 2. CSS files
 
 This is an HTML page that displays a header and a footer by using CSS files (same as 1-index.html)
+
+3. Zoning done!
+
+This is an HTML page that displays a header and footer by using CSS files (same as 2-index.html)
