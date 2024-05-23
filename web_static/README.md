@@ -25,3 +25,7 @@ This is an HTML page that displays a header, footer and a filters box with a sea
 5. More filters
 
 This is an HTML page that displays a header, footer and a filters box.
+
+6. It's (h)over
+
+This is an HTML page that displays a header, footer and a filters box with dropdown.
