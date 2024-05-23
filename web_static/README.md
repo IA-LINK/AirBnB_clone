@@ -49,3 +49,7 @@ This improves the Places section by using Flexible boxes for all Place articles
 11. Responsive design
 
 This improves the page by adding responsive design to display correctly in mobile or small screens.
+
+12. Accessibility
+
+This improves the page by adding Accessibility support
