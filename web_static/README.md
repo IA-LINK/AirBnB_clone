@@ -21,3 +21,7 @@ This is an HTML page that displays a header and footer by using CSS files (same 
 4. Search!
 
 This is an HTML page that displays a header, footer and a filters box with a search button.
+
+5. More filters
+
+This is an HTML page that displays a header, footer and a filters box.
