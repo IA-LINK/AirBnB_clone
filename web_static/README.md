@@ -29,3 +29,7 @@ This is an HTML page that displays a header, footer and a filters box.
 6. It's (h)over
 
 This is an HTML page that displays a header, footer and a filters box with dropdown.
+
+7. Display results
+
+This is an HTML page that displays a header, footer, a filters box with dropdown and results.
