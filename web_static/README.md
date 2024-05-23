@@ -45,3 +45,7 @@ This is an HTML page that displays a header, footer, a filters box with dropdown
 10. Flex
 
 This improves the Places section by using Flexible boxes for all Place articles
+
+11. Responsive design
+
+This improves the page by adding responsive design to display correctly in mobile or small screens.
