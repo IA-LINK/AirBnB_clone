@@ -41,3 +41,7 @@ This is an HTML page that displays a header, a footer, a filter box (dropdown li
 9. Full details
 
 This is an HTML page that displays a header, footer, a filters box with dropdown and results.
+
+10. Flex
+
+This improves the Places section by using Flexible boxes for all Place articles
