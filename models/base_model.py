@@ -1,44 +1,65 @@
 #!/usr/bin/python3
-"""Defines the BaseModel"""
-
-
+"""
+This module defines the generic attributes and
+behaviours for other classes.
+"""
 from uuid import uuid4
-from datetime import date, datetime
-import models
+from datetime import datetime
+from models import storage
 
 
 class BaseModel:
-    """The super class"""
+    """
+    Defines the BaseModel class. The parent class
+    with common members for other classes.
+    """
+
     def __init__(self, *args, **kwargs):
-        """Initializing the base model"""
-        if len(kwargs) != 0:
-            for key, value in kwargs.items():
-                if key == "__class__":
-                    continue
-                elif key == "created_at" or key == "updated_at":
-                    setattr(self, key, datetime.fromisoformat(value))
-                else:
-                    setattr(self, key, value)
-        else:
+        """
+        Initializes an instance of the BaseModel.
+
+        Parameters
+        args : tuple
+            A non-keyworded variable number of
+            arguments.
+        kwargs : dictionary
+            A key-worded variable number of
+            arguments.
+        """
+        if (kwargs == {}):
             self.id = str(uuid4())
             self.created_at = datetime.now()
-            self.updated_at = self.created_at
-            models.storage.new(self)
+            self.updated_at = datetime.now()
+            storage.new(self)
+        else:
+            for key, value in kwargs.items():
+                if (key == "__class__"):
+                    continue
+                setattr(self, key, datetime.fromisoformat(value)
+                        if ("_at" in key) else value)
 
     def __str__(self):
-        """sets the print behaviour of the base model"""
-        class_name = self.__class__.__name__
-        return "[{}] ({}) {}".format(class_name, self.id, self.__dict__)
+        """
+        Returns a string representation for
+        an instance.
+        """
+        return (f"[{type(self).__name__}] ({self.id}) {self.__dict__}")
 
     def save(self):
-        """updates up_dated with current datetime"""
+        """
+        Updates the `updated_at` attribute
+        with the current date time.
+        """
         self.updated_at = datetime.now()
-        models.storage.save()
+        storage.save()
 
     def to_dict(self):
-        """returns a dictionary containing all key/values of __dict__"""
-        new_dict = self.__dict__.copy()
-        new_dict["created_at"] = self.created_at.isoformat()
-        new_dict["updated_at"] = self.updated_at.isoformat()
-        new_dict["__class__"] = self.__class__.__name__
-        return new_dict
+        """
+        Returns a dictionary of attributes
+        belonging toan instance.
+        """
+        obj_dict = {}
+
+        for key, value in self.__dict__.items():
+            obj_dict[key] = value.isoformat() if ("_at" in key) else value
+        obj_dict["__class__"] = type(self).__name__
