@@ -37,3 +37,7 @@ This is an HTML page that displays a header, footer, a filters box with dropdown
 8. More details
 
 This is an HTML page that displays a header, a footer, a filter box (dropdown list) and the result of the search
+
+9. Full details
+
+This is an HTML page that displays a header, footer, a filters box with dropdown and results.
