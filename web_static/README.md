@@ -17,3 +17,7 @@ This is an HTML page that displays a header and a footer by using CSS files (sam
 3. Zoning done!
 
 This is an HTML page that displays a header and footer by using CSS files (same as 2-index.html)
+
+4. Search!
+
+This is an HTML page that displays a header, footer and a filters box with a search button.
