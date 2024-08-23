@@ -1,22 +1,9 @@
-footer {
-    background-color: #00FF00;
-    height: 60px;
-    width: 100%;
-<<<<<<< HEAD
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  footer p {
-    text-align: center;
-  }
-=======
-    position: fixed;
-    bottom: 0;
+footer{
+    Background-color:#00FF00;
+    height:60px;
+    width:100%;
+    position: absolute;
+    bottom:0;
+    text-align:center;
+    line-height:60px
 }
-p {
-    text-align: center;
-    line-height: 30px;
-}
->>>>>>> 004df96c58caf565ea2ed56407c36dab6e69ce5b

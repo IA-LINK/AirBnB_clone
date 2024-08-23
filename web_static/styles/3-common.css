@@ -1,20 +1,8 @@
 body {
-<<<<<<< HEAD
-    margin:0;
-    padding:0;
-    height:100vh;
-    color: #484848;
-    font-size: 14px;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    display: flex;
-    flex-direction:column;
-    justify-content:space-between;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	color: #484848;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
 }
-=======
-    margin: 0;
-    padding: 0;
-    color: #484848;
-    font-size: 14px;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-}
->>>>>>> 004df96c58caf565ea2ed56407c36dab6e69ce5b
